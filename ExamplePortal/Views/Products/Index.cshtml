@@ -1,0 +1,11 @@
+﻿@model IEnumerable<ProductDecorator>
+
+@{
+    ViewBag.Title = "Products";
+}
+
+<h1>Products</h1>
+
+@{
+    Model.ForEach(product => Html.RenderPartial("_Product", product));
+}
